@@ -26,6 +26,22 @@ post '/name/:name/available' do
   set_presence(:auto)
 end
 
+get '/name/:name/away' do
+  if ENV[params['name'].upcase].nil?
+    "Hmm, I don't see #{params['name'].capitalize} in my list.  Check the README.md."
+  else
+    "Looks like you're all set #{params['name'].capitalize}, thanks! "
+  end
+end
+
+get '/name/:name/available' do
+  if ENV[params['name'].upcase].nil?
+    "Hmm, I don't see #{params['name'].capitalize} in my list.  Check the README.md."
+  else
+    "Looks like you're all set #{params['name'].capitalize}, thanks! "
+  end
+end
+
 get '/' do
   'Oh hai!'
 end
