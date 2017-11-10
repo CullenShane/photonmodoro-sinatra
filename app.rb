@@ -26,3 +26,6 @@ post '/name/:name/available' do
   set_presence(:auto)
 end
 
+get '/' do
+  'Oh hai!'
+end
